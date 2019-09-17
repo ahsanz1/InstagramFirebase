@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/noPhotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="25sp"
+        android:text="No Photos to Show!"/>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/profileImageCircular"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/nameNbio"
+        android:background="@color/cardview_light_background"
+        app:civ_border_color="#EEEEEE"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#8BC34A"
+        app:civ_shadow_radius="10" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/profileImageCircular"
+        android:layout_marginStart="25dp"
+        android:id="@+id/totalsLayout">
+
+
+        <TextView
+            android:id="@+id/totalposts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/totalfollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/totalfollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/profileImageCircular"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/totalsLayout"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/posts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="posts"
+            android:textSize="15sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="followers"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_marginStart="20dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="following"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/forButtonLinear"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout">
+
+
+        <Button
+            android:id="@+id/editProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/edit_profile_button"
+            android:text="Edit Your Profile"
+            android:textAllCaps="false"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameNbio"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/profileImageCircular"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/usernameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ahsan Zafar"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bioView"
+            android:text="When there's will, there's a way."
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"/>
+
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerInstaPost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nameNbio"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+</RelativeLayout>

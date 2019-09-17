@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ahsanz.instagramfirebase.GramHomeActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Contact Us!"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/signoutmenu"
+        android:title="Sign Out"
+        app:showAsAction="never"></item>
+</menu>

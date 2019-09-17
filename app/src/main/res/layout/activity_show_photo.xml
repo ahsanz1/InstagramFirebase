@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ahsanz.instagramfirebase.ShowPhotoActivity"
+    android:background="@drawable/border">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/cardProfileImage"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        app:civ_border_color="#EEEEEE"
+        android:background="#ffffff"
+        app:civ_border_width="0dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#8BC34A"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"/>
+    
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/cardProfileImage"
+        android:padding="5dp"/>
+    
+    <ImageView
+        android:id="@+id/likeIcon"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/postImage"
+        app:srcCompat="@drawable/whiteheart"
+        android:padding="5dp" />
+
+    <ImageView
+        android:id="@+id/messageIcon"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        app:srcCompat="@drawable/message_icon"
+        android:layout_below="@id/postImage"
+        android:layout_toEndOf="@id/likeIcon"/>
+
+            <ImageView
+                android:id="@+id/addCommentIcon"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_tooltip_outline_plus_black"
+                android:layout_below="@id/postImage"
+                android:layout_toEndOf="@id/messageIcon"/>
+
+    <TextView
+        android:id="@+id/likesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Likes"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        android:layout_below="@id/messageIcon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usernametext"
+        android:text="username"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/likesTextView"
+        android:padding="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ShowCaptionText"
+        android:text="this is caption"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/usernametext"
+        android:layout_alignBottom="@+id/usernametext"
+        android:layout_toEndOf="@+id/usernametext"
+        android:layout_marginStart="7dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    
+</android.widget.RelativeLayout>

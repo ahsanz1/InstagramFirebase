@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ahsanz.instagramfirebase.UserProfileActivity">
+
+    <include layout="@layout/fragment_instagram_post"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="73dp"
+        android:background="@drawable/follow_button"
+        android:text="Follow"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background"
+        android:id="@+id/followButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+</android.widget.RelativeLayout>
